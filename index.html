@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pourboire — Calculateur de pourboire</title>
+</head>
+<body>
+    <header>
+        <div class="navigation">
+            <div class="logo">
+                <img src="images/logo.png" alt="pourboire"/>
+                <p>L’addition, en toute simplicité.</p>
+            </div>
+
+            <div>
+                <label for="devise">Choix de devise</label>
+                <select name="devise" id="devise" form="form-calculateur">
+                    <option value="BRL">Réal brésilien — BRL</option>
+                    <option value="USD">Dollar américain — USD</option>
+                    <option value="EUR">Euro — EUR</option>
+                </select>
+            </div>
+        </div>
+    </header>
+    <main>
+       <h1>Calculateur de pourboire</h1>
+        <form class="calculateur" id="form-calculateur">
+            <div class="montant">
+                <label for="montant">Montant de l’addition</label>
+                <span class="devise_signe">R$</span>
+                <input type="text" name="montant" id="montant" inputmode="decimal" required/>
+            </div>
+
+            <fieldset>
+                <legend>Pourboire</legend>
+                <div class="choix-pourboire">
+                    <div>
+                        <input type="radio" name="pourboire" value="5" id="pourboire-5"/>
+                        <label for="pourboire-5">5%</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="pourboire" value="10" id="pourboire-10"   checked/>
+                        <label for="pourboire-10">10%</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="pourboire" value="15" id="pourboire-15"/>
+                        <label for="pourboire-15">15%</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="pourboire" value="20" id="pourboire-20"/>
+                        <label for="pourboire-20">20%</label>
+                    </div>
+                </div>
+            </fieldset>
+
+            <div class="pourboire-personnalise">
+                <label for="taux-personnalise">Ou un taux personnalisé</label>
+                <input type="text" name="taux-personnalise" id="taux-personnalise" inputmode="decimal"/>
+                <span>%</span>
+            </div>
+            <button type="submit">Calculer le total →</button>
+
+        </form>
+
+
+        <div class="recapitulatif">
+            <h2>Votre récapitulatif</h2>
+            <p>Total à régler</p>
+            <p class="montant-total"><span class="devise_signe">R$</span> - </p>
+            <p hidden>Pourboire de <span id="pourboire-percent">-</span>% inclus</p>
+
+            <hr class="separateur">
+
+            <div class="resume-calcul">
+                <div class="addition">
+                    <p>Addition</p>
+                    <p><span class="devise_signe">R$</span> -</p>
+                </div>
+                <div class="pourboire">
+                    <p>Pourboire</p>
+                    <p><span class="devise_signe">R$</span> -</p>
+                </div>
+            </div>
+
+            <hr class="separateur">
+
+            <div class="ligne-total">
+                <p>Total</p>
+                <p><span class="devise_signe">R$</span> -</p>
+            </div>
+            <p>Vérifiez si le service est déjà inclus dans l’addition.</p>
+            <button type="button" class="reinitialiser">Réinitialiser</button>
+        </div>
+    </main>
+</body>
+</html>
