@@ -1,0 +1,36 @@
+:root{
+    /* couleur */
+    --color-canvas : #F4F3ED;
+    --color-surface : #FFFFFF;
+    --color-primary : #183C32;
+    --color-muted : #52665E;
+    --color-accent : #D9F178;
+    --color-error : #AD3232;
+
+ /* Famille de police */
+    --font-family-body: "Bricolage Grotesque", sans-serif, arial;
+    --font-family-title: "Literata", serif;
+
+   /* Titre : 28 / 34 · 700 */
+    --font-size-title: 1.75rem;
+    --line-height-title: 1.2143;
+    --font-weight-title: 700;
+    
+    /* Grand montant — mobile : 40 / 44 */
+    --font-size-total: 2.5rem;
+    --line-height-total: 1.1;
+    
+    /* Grand montant — desktop : 56 / 62 */
+    --font-size-total-desktop: 3.5rem;
+    --line-height-total-desktop: 1.1071;
+    
+    /* Texte courant : 16 / 24 · 400 */
+    --font-size-body: 1rem;
+    --line-height-body: 1.5;
+    --font-weight-body: 400;
+    
+    /* Libellé de champ : 14 / 20 · 700 */
+    --font-size-label: 0.875rem;
+    --line-height-label: 1.4286;
+    --font-weight-label: 700;
+}
