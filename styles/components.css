@@ -30,7 +30,7 @@
     --font-weight-body: 400;
     
     /* Libellé de champ : 14 / 20 · 700 */
-    --font-size-label: 0.875rem;
+    --font-size-label: 1.25rem;
     --line-height-label: 1.4286;
     --font-weight-label: 700;
 }

@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600;700&family=Literata:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap" rel="stylesheet">
     <title>Pourboire — Calculateur de pourboire</title>
     <link rel="stylesheet" href="styles/reset.css"/> 
     <link rel="stylesheet" href="styles/styles.css"/>
@@ -15,28 +15,26 @@
 <body>
     <header>
         <div class="navigation">
-            <div class="logo">
-                <img src="images/logo.png" alt="pourboire"/>
+            <div class="logo-text">
+                <h1 class="logo">Pourboire</h1>
                 <p>L’addition, en toute simplicité.</p>
             </div>
 
             <div>
-                <label for="devise">Choix de devise</label>
+                <label for="devise"></label>
                 <select name="devise" id="devise" form="form-calculateur">
-                    <option value="BRL">Réal brésilien — BRL</option>
-                    <option value="USD">Dollar américain — USD</option>
-                    <option value="EUR">Euro — EUR</option>
+                    <option value="BRL">BRL . $R</option>
+                    <option value="USD">USD . $</option>
+                    <option value="EUR">EUR . €</option>
                 </select>
             </div>
         </div>
     </header>
     <main>
-       <h1>Calculateur de pourboire</h1>
         <form class="calculateur" id="form-calculateur">
             <div class="montant">
                 <label for="montant">Montant de l’addition</label>
-                <span class="devise_signe">R$</span>
-                <input type="text" name="montant" id="montant" inputmode="decimal" required/>
+                <input type="text" name="montant" id="montant" inputmode="decimal" placeholder="$R" required/>
             </div>
 
             <fieldset>
