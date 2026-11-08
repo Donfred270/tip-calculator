@@ -21,82 +21,85 @@
             </div>
 
             <div>
-                <label for="devise"></label>
+                <label for="devise">Devise</label>
                 <select name="devise" id="devise" form="form-calculateur">
-                    <option value="BRL">BRL . $R</option>
-                    <option value="USD">USD . $</option>
-                    <option value="EUR">EUR . €</option>
+                    <option value="BRL">BRL · R$</option>
+                    <option value="USD">USD · $</option>
+                    <option value="EUR">EUR · €</option>
                 </select>
             </div>
         </div>
     </header>
     <main>
-        <form class="calculateur" id="form-calculateur">
-            <div class="montant">
-                <label for="montant">Montant de l’addition</label>
-                <input type="text" name="montant" id="montant" inputmode="decimal" placeholder="$R" required/>
-            </div>
-
-            <fieldset>
-
-                <legend>Pourboire</legend>
-                <div class="choix-pourboire">
-                    <div>
-                        <input type="radio" name="pourboire" value="5" id="pourboire-5"/>
-                        <label for="pourboire-5">5%</label>
-                    </div>
-                    <div>
-                        <input type="radio" name="pourboire" value="10" id="pourboire-10"   checked/>
-                        <label for="pourboire-10">10%</label>
-                    </div>
-                    <div>
-                        <input type="radio" name="pourboire" value="15" id="pourboire-15"/>
-                        <label for="pourboire-15">15%</label>
-                    </div>
-                    <div>
-                        <input type="radio" name="pourboire" value="20" id="pourboire-20"/>
-                        <label for="pourboire-20">20%</label>
-                    </div>
+        <div class="clacul-box">
+            <form class="calculateur" id="form-calculateur">
+                <div class="montant">
+                    <label for="montant">Montant de l’addition</label>
+                    <input type="text" name="montant" id="montant"  inputmode="decimal" placeholder="Ex. : 200,00" required/>
                 </div>
-                
+
+                <fieldset>
+
+                    <legend>Pourboire</legend>
+                    <div class="choix-pourboire">
+                        <div>
+                            <input type="radio" name="pourboire"    value="5" id="pourboire-5"/>
+                            <label for="pourboire-5">5%</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="pourboire"    value="10" id="pourboire-10"   checked/>
+                            <label for="pourboire-10">10%</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="pourboire"    value="15" id="pourboire-15"/>
+                            <label for="pourboire-15">15%</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="pourboire"    value="20" id="pourboire-20"/>
+                            <label for="pourboire-20">20%</label>
+                        </div>
+                    </div>
+            
             </fieldset>
 
             <div class="pourboire-personnalise">
                 <label for="taux-personnalise">Ou un taux personnalisé</label>
-                <input type="text" name="taux-personnalise" id="taux-personnalise" inputmode="decimal"/>
-                <span>%</span>
+                <input type="text" name="taux-personnalise" id="taux-personnalise" inputmode="decimal" placeholder="Ex. : 12"/>
+                <p>Un pourboire est facultatif. Vous pouvez saisir 0 %.</p>
             </div>
-            <button type="submit">Calculer le total →</button>
+            <button class="calcul-btn" type="submit">Calculer le total</button>
 
         </form>
+        </div>
 
 
         <div class="recapitulatif">
             <h2>Votre récapitulatif</h2>
-            <p>Total à régler</p>
-            <p class="montant-total"><span class="devise_signe">R$</span> - </p>
-            <p hidden>Pourboire de <span id="pourboire-percent">-</span>% inclus</p>
+            <p class="text-alt">Total à régler</p>
+            <p class="montant-total"><span class="devise_signe">R$</span>-</p>
+            <p class="text-alt" >Pourboire de <span id="pourboire-percent">-</span>% inclus</p>
 
-            <hr class="separateur">
+            <hr class="separateur1">
 
             <div class="resume-calcul">
-                <div class="addition">
+                <div class="ligne-recap">
                     <p>Addition</p>
-                    <p><span class="devise_signe">R$</span> -</p>
+                    <p id="montant-addition">—</p>
                 </div>
-                <div class="pourboire">
+            
+                <div class="ligne-recap">
                     <p>Pourboire</p>
-                    <p><span class="devise_signe">R$</span> -</p>
+                    <p id="montant-pourboire">—</p>
                 </div>
             </div>
 
-            <hr class="separateur">
+            <hr class="separateur2">
 
             <div class="ligne-total">
                 <p>Total</p>
-                <p><span class="devise_signe">R$</span> -</p>
+                <p><span class="devise_signe">-</span></p>
             </div>
-            <p>Vérifiez si le service est déjà inclus dans l’addition.</p>
+            <p class="text-alt">Vérifiez si le service est déjà inclus dans l’addition.</p>
             <button type="button" class="reinitialiser">Réinitialiser</button>
         </div>
     </main>
